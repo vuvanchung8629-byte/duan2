@@ -547,6 +547,23 @@ luôn luôn vui vẻ nè ✨
 </audio>
 
 <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('music');
+    
+    // Tạo một sự kiện: Chỉ cần người dùng chạm hoặc click bất kỳ đâu trên màn hình, nhạc sẽ phát
+    document.addEventListener('click', function() {
+      if (audio.paused) {
+        audio.play().then(() => {
+          console.log("Nhạc đang phát thành công!");
+        }).catch(err => {
+          console.log("Trình duyệt vẫn chặn: ", err);
+        });
+      }
+    }, { once: true }); // Thuộc tính { once: true } để lệnh này chỉ chạy duy nhất 1 lần đầu tiên
+  });
+</script>
+
+<script>
 
 const screens =
 document.querySelectorAll(".screen");
