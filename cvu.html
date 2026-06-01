@@ -276,7 +276,7 @@
       <div class="card">
         <div class="gift" id="gift">🎁</div>
 
-        <h1 class="title">Có người gửi em một món quà 🌸</h1>
+        <h1 class="title">Có người gửi Anh Thư một món quà 🌸</h1>
 
         <p class="text">Hãy chạm vào hộp quà nhé</p>
       </div>
@@ -288,7 +288,7 @@
       <div class="card">
         <h1 class="title">Khoan đã 😳</h1>
 
-        <p class="text">Mở món quà này có thể khiến em mỉm cười đó...</p>
+        <p class="text">Mở món quà này có thể khiến con mỉm cười đó...</p>
 
         <button class="btn pink" id="yesBtn">Mở tiếp 💖</button>
 
@@ -328,7 +328,7 @@
 </h1>
 
 <p class="text">
-Nếu hôm nay em đã có một ngày vui vẻ...
+Nếu hôm nay Anh Thư đã có một ngày vui vẻ...
 <br><br>
 Thì thật tuyệt vời ✨
 <br><br>
@@ -338,7 +338,7 @@ Hãy giữ nụ cười đó thật lâu nhé.
 <button
 class="btn pink"
 id="next2">
-Em biết rồi 😌
+ con bít rồi ạ 😌
 </button>
 
 </div>
@@ -352,7 +352,7 @@ Em biết rồi 😌
 <div class="card">
 
 <h1 class="title">
-🌷 Còn nếu hôm nay em hơi mệt...
+🌷 Còn nếu hôm nay con hơi mệt...
 </h1>
 
 <p class="text">
@@ -395,7 +395,7 @@ font-size:18px;
 color:#555;">
 Tạm thời chưa có hoa thật 🌸
 <br>
-Nên tặng em một bông hoa online trước nha
+Nên tặng con một bông hoa online trước nha
 </p>
 
 <button
@@ -474,7 +474,7 @@ Còn nữa sao? 😳
 
 <div class="final">
 
-Chúc em luôn vui vẻ 🌸
+Chúc con luôn vui vẻ 🌸
 
 </div>
 
@@ -492,7 +492,7 @@ cho món quà nhỏ này ✨
 
 Mong rằng những ngày tới
 sẽ có thật nhiều điều tốt đẹp
-đến với em 🌷
+đến với con 🌷
 
 </p>
 
@@ -528,10 +528,10 @@ font-size:22px;
 line-height:2;
 color:#555;">
 
-Người gửi: Chung Vũ
+Người gửi: Cậu Chung
 <br><br>
 
-Chúc em ngày 1/6
+Chúc Anh Thư ngày 1/6
 luôn luôn vui vẻ nè ✨
 
 </p>
@@ -543,8 +543,24 @@ luôn luôn vui vẻ nè ✨
 <!-- CHỖ NHẠC -->
 
 <audio id="music" loop>
-  <source src="/Lửa Gần Rơm.mp3" type="audio/mpeg">
+  <source src="lua-gan-rom.mp3" type="audio/mpeg">
 </audio>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('music');
+    
+    // Tạo một sự kiện: Chỉ cần người dùng chạm hoặc click bất kỳ đâu trên màn hình, nhạc sẽ phát
+    document.addEventListener('click', function() {
+      if (audio.paused) {
+        audio.play().then(() => {
+          console.log("Nhạc đang phát thành công!");
+        }).catch(err => {
+          console.log("Trình duyệt vẫn chặn: ", err);
+        });
+      }
+    }, { once: true }); // Thuộc tính { once: true } để lệnh này chỉ chạy duy nhất 1 lần đầu tiên
+  });
+</script>
 
 <script>
 
